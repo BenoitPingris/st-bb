@@ -9,11 +9,11 @@
 static char *font = "Hack Nerd Font:size=12:antialias=true:autohint=true";
 // static char *font = "JetBrains Mono:pixelsize=14:antialias=true";
 
-/*static char *font2[] = {
+static char *font2[] = {
 	"Symbola:pixelsize=12:antialias=true:autohint=true",
 };
-*/
-static int borderpx = 10;
+
+static int borderpx = 15;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -185,9 +185,9 @@ static Shortcut shortcuts[] = {
 	{ ControlMask,          XK_Print,       toggleprinter,  {.i =  0} },
 	{ ShiftMask,            XK_Print,       printscreen,    {.i =  0} },
 	{ XK_ANY_MOD,           XK_Print,       printsel,       {.i =  0} },
-	{ TERMMOD,              XK_Prior,       zoom,           {.f = +1} },
-	{ TERMMOD,              XK_Next,        zoom,           {.f = -1} },
-	{ TERMMOD,              XK_Home,        zoomreset,      {.f =  0} },
+	{ TERMMOD,              XK_plus,        zoom,           {.f = +1} },
+	{ ControlMask,          XK_minus,       zoom,           {.f = -1} },
+	{ ControlMask,          XK_equal,       zoomreset,      {.f =  0} },
 	{ TERMMOD,              XK_C,           clipcopy,       {.i =  0} },
 	{ TERMMOD,              XK_V,           clippaste,      {.i =  0} },
 	{ TERMMOD,              XK_Y,           selpaste,       {.i =  0} },
